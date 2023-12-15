@@ -1,0 +1,41 @@
+// ECHAVEZ ANDREA A. 
+// BSCPE 2-1 
+// LOOP FLOW CONTROL ACT 2B - MULTIPLICATION TABLE
+
+import java.util.Scanner;
+public class Loop_Activity_2B 
+{
+    public static void main(String[] args) 
+    {
+       System.out.println("********************************************");
+       System.out.println("*     MULTIPLICATION TABLE GENERATOR       *");
+       System.out.println("********************************************");
+       System.out.println("                           Press 0 to exit..");
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) 
+        {
+             System.out.println("____________________________________________");
+            System.out.print("\nMULTIPLICATION TABLE OF: ");
+            int number = scanner.nextInt();
+
+            if (number == 0) 
+            {
+                System.out.println("Thank you...");
+                break;
+            }
+            printTable(number);
+        }
+    }
+
+    public static void printTable(int number) 
+    {
+         System.out.println("____________________________________________");
+        for (int n = 1; n <= 10; n++) 
+        {
+            System.out.println(number + " x " + n + " = " + (number * n));
+        }
+        System.out.println("____________________________________________");
+        System.out.println("                           Press 0 to exit..");
+    }
+}
