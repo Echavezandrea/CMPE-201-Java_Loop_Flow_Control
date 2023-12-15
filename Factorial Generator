@@ -1,0 +1,37 @@
+// ECHAVEZ ANDREA A. 
+// BSCPE 2-1 
+// LOOP FLOW CONTROL ACT 2A - FACTORIAL
+
+import java.util.Scanner;
+public class Loop_Activity_2A 
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***************************************************");
+        System.out.println("*                FACTORIAL GENERATOR              *");
+        System.out.println("***************************************************");
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Factorial of Numbner: ");
+        int n = scanner.nextInt();
+
+        long factorial = Factorial(n);
+        System.out.println("The Factorial of " + n + " is: " + factorial);
+    }
+
+    public static long Factorial(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("Error. Please Try again.");
+        }
+
+        long factorial = 1;
+        int f = 1;
+
+        while (f <= n) 
+        {
+            factorial *= f;
+            f++;
+        }
+        return factorial;
+    }
+}
