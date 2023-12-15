@@ -1,0 +1,40 @@
+// ECHAVEZ ANDREA A. 
+// BSCPE 2-1 
+// LOOP FLOW CONTROL ACT 1B - AVERAGE
+
+import java.util.Scanner;
+public class Loop_Activity_1B 
+{
+    public static void main(String[] args) 
+    {
+        System.out.println("********************************");
+        System.out.println("* WELCOME TO AVERAGE GENERATOR *");
+        System.out.println("********************************");
+        
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("No.of Grades you will Enter: ");
+        int numOfGrades = scanner.nextInt();
+        int num = 0;
+        double sum = 0;
+
+        System.out.print("_______________________________\n");
+        
+        while (num < numOfGrades) 
+        {
+            System.out.print("ENTER YOUR GRADE NO." + (num + 1) + ": ");
+            double grade = scanner.nextDouble();
+            sum += grade;
+            num ++;
+        }
+
+        if (numOfGrades > 0) {
+            double average = sum / numOfGrades;
+            System.out.print("_______________________________\n");
+            System.out.println("Your Total Average is " + average);
+        } 
+        else {
+            System.out.println("Grades unknown. Please try again.");
+        }
+    }  
+}
